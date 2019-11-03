@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Satellite } from './satellite';
 
-// let sourceList: [string, string, string, string, boolean];
 
 @Component({
   selector: 'app-root',
@@ -32,12 +31,6 @@ export class AppComponent {
       }.bind(this));
     }.bind(this));
 
-
-
-    // TODO: create a Satellite object using 
-    // let satelliteObj 
-    // TODO: add the new Satellite object to sourceList using: 
-
   }
   search(searchTerm: string): void {
     let matchingSatellites: Satellite[] = [];
@@ -48,8 +41,7 @@ export class AppComponent {
         matchingSatellites.push(this.sourceList[i]);
       }
     }
-    // assign this.displayList to be the the array of matching satellites
-    // this will cause Angular to re-make the table, but now only containing matches
+
     this.displayList = matchingSatellites;
   }
 }
